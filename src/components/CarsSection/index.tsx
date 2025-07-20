@@ -6,22 +6,27 @@ import SectionTitle from '../elements/SectionTitle';
 
 const cars = [
   {
-    src: '/images/auto1.jpg',
+    src: '/images/auto01.JPG',
     model: 'Toyota Camry',
     transmission: 'АКПП',
   },
   {
-    src: '/images/auto2.jpg',
+    src: '/images/auto02.jpg',
     model: 'Honda Accord',
     transmission: 'АКПП',
   },
   {
-    src: '/images/auto3.jpg',
+    src: '/images/auto03.jpg',
     model: 'Volkswagen Polo',
     transmission: 'МКПП',
   },
   {
-    src: '/images/auto1.jpg',
+    src: '/images/auto04.JPG',
+    model: 'Hyundai Solaris',
+    transmission: 'АКПП',
+  },
+  {
+    src: '/images/auto05.jpg',
     model: 'Hyundai Solaris',
     transmission: 'АКПП',
   },

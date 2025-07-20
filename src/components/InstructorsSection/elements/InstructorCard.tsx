@@ -25,9 +25,9 @@ const InstructorCard: React.FC<{ instructor: Instructor }> = ({ instructor }) =>
       <span className="text-sm md:text-base text-gray-500 mb-4 text-center">{instructor.status}</span>
       <div className="bg-gray-50 rounded-xl p-4 grid grid-cols-2 gap-2 w-full mt-2 text-center">
         <div className="text-gray-500 font-medium">Стаж водіння</div>
-        <div className="text-gray-900 font-semibold">{instructor.drivingExperience} років</div>
+        <div className="text-gray-900 font-semibold">{instructor.drivingExperience} </div>
         <div className="text-gray-500 font-medium">Навчає інших</div>
-        <div className="text-gray-900 font-semibold">{instructor.teachingExperience} років</div>
+        <div className="text-gray-900 font-semibold">{instructor.teachingExperience} </div>
       </div>
     </div>
   </article>

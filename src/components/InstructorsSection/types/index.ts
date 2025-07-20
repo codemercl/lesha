@@ -3,8 +3,8 @@ export type Instructor = {
   name: string;
   status: string;
   location: string;
-  drivingExperience: number;
-  teachingExperience: number;
+  drivingExperience: string;
+  teachingExperience: string;
   logoSrc: string;
   backgroundSrc: string;
 }; 

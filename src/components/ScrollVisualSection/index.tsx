@@ -33,7 +33,7 @@ const ScrollVisualSection = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const offsets = cardRefs.current.map(ref => {
+      const offsets = cardRefs.current?.map(ref => {
         if (!ref) return Infinity;
         const rect = ref.getBoundingClientRect();
         return Math.abs(rect.top - window.innerHeight / 2);

@@ -17,32 +17,6 @@ const IconOnline = (
 
 const courses = [
   {
-    type: 'Практичні Заняття',
-    title: 'Механічна КП',
-    list: [
-      'Навчання з нуля — мінімум 20 занять',
-      'Поновлення навичок водіння — необмежена кількість занять',
-    ],
-    details: [
-      { icon: IconCar, text: 'Механічна КП' },
-      { icon: IconMoney, text: '600 грн за заняття' },
-      { icon: IconTime, text: 'Тривалість — 2 години' },
-    ],
-  },
-  {
-    type: 'Практичні Заняття',
-    title: 'Автоматична КП',
-    list: [
-      'Навчання з нуля — мінімум 20 занять',
-      'Поновлення навичок водіння — необмежена кількість занять',
-    ],
-    details: [
-      { icon: IconCar, text: 'Автоматична КП' },
-      { icon: IconMoney, text: '650 грн за заняття' },
-      { icon: IconTime, text: 'Тривалість — 2 години' },
-    ],
-  },
-  {
     type: 'Теоретичні Заняття',
     title: 'Онлайн-курс ПДР',
     list: [
@@ -55,13 +29,39 @@ const courses = [
       { icon: IconTime, text: 'Тривалість — 1 місяць' },
     ],
   },
+  {
+    type: 'Практичні Заняття',
+    title: 'Механічна КПП',
+    list: [
+      'Навчання з нуля — мінімум 20 занять',
+      'Поновлення навичок водіння — необмежена кількість занять',
+    ],
+    details: [
+      { icon: IconCar, text: 'Механічна КПП' },
+      { icon: IconMoney, text: '600 грн за годину' },
+      { icon: IconTime, text: 'Тривалість — 2 години' },
+    ],
+  },
+  {
+    type: 'Практичні Заняття',
+    title: 'Автоматична КПП',
+    list: [
+      'Навчання з нуля — мінімум 20 занять',
+      'Поновлення навичок водіння — необмежена кількість занять',
+    ],
+    details: [
+      { icon: IconCar, text: 'Автоматична КПП' },
+      { icon: IconMoney, text: '650 грн за годину' },
+      { icon: IconTime, text: 'Тривалість — 2 години' },
+    ],
+  }
 ];
 
 const CoursesSection: React.FC = () => {
   return (
     <section id="courses" data-bg="white" className="w-full py-10 md:py-0 md:pb-20 md:pt-10 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <SectionTitle as="h2" className="md:text-center mb-4">Наші заняття</SectionTitle>
+        <SectionTitle as="h2" className="md:text-center mb-4">Наші послуги</SectionTitle>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 md:gap-10">
           {courses.map((course, idx) => (
             <div

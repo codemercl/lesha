@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-16" aria-label="Site footer">
+    <footer className="bg-[#252020] text-white py-16" aria-label="Site footer">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Логотип и описание */}

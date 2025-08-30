@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Про нас', href: 'about', ariaLabel: 'Перейти до секції Про нас' },
   { label: 'Автомобілі', href: 'cars', ariaLabel: 'Перейти до секції Автомобілі' },
   { label: 'Інструктори', href: 'instructors', ariaLabel: 'Перейти до секції Інструктори' },
+  { label: 'Відгуки', href: 'testimonials', ariaLabel: 'Перейти до секції Відгуки' },
   { label: 'Контакти', href: 'contacts', ariaLabel: 'Перейти до секції Контакти' },
 ] as const;
 

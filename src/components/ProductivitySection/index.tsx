@@ -25,94 +25,83 @@ const ProductivitySection = () => {
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-red-600/10 rounded-full blur-3xl" />
       
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Text & CTA */}
-          <div className="space-y-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-40">
+        <div className="text-center max-w-4xl mx-auto">
 
-            {/* Title */}
-            <div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
-                <span className="text-red-500">Формула</span>
-                <br />
-                <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  водіння
-                </span>
-              </h1>
-              <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-red-600 rounded-full mb-6" />
+          {/* Title */}
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+              Формула
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+              водіння
+            </span>
+          </h1>
+
+          {/* Rating */}
+          <div className="flex items-center justify-center space-x-2 mb-8">
+            <div className="flex space-x-1">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
             </div>
+            <span className="text-white text-lg font-semibold">4.9/5</span>
+            <span className="text-gray-400">• 500+ відгуків</span>
+          </div>
 
-            {/* Description */}
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl">
-              Ми — твій партнер на шляху до впевненості за кермом.
-              <span className="text-white font-semibold"> Наша місія</span> — навчити тебе водити з безпекою та відповідальністю.
-            </p>
+          {/* Description */}
+          <p className="text-xl md:text-2xl text-gray-200 leading-relaxed mb-12 max-w-3xl mx-auto">
+            Ми — твій партнер на шляху до впевненості за кермом.
+            <span className="text-white font-semibold"> Наша місія</span> — навчити тебе водити з безпекою та відповідальністю.
+          </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 py-8">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-red-500 mb-2">500+</div>
-                <div className="text-gray-400 text-sm">Випускників</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-red-500 mb-2">15+</div>
-                <div className="text-gray-400 text-sm">Років досвіду</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-red-500 mb-2">98%</div>
-                <div className="text-gray-400 text-sm">Успішність</div>
-              </div>
-            </div>
-
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                className="group flex items-center justify-center bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-4 rounded-2xl font-semibold shadow-2xl hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-300"
-                type="button"
-                aria-label="Розпочати навчання"
-              >
-                <svg className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          {/* Main CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <button
+              className="group relative overflow-hidden bg-gradient-to-r from-red-500 to-red-600 text-white px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-300 cursor-pointer"
+              type="button"
+              aria-label="Розпочати навчання"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              <div className="relative flex items-center justify-center">
+                <svg className="w-6 h-6 mr-3 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
                 Розпочати навчання
-              </button>
-              
-              <button
-                className="group flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300"
-                onClick={() => setShowVideo(true)}
-                type="button"
-                aria-label="Переглянути відео"
-              >
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-3 group-hover:bg-red-500 transition-colors">
-                  <svg className="w-4 h-4 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                    <polygon points="5 3 19 12 5 21 5 3" />
-                  </svg>
-                </div>
-                Переглянути відео
-              </button>
-            </div>
+              </div>
+            </button>
+            
+            <button
+              className="group flex items-center justify-center bg-white/10 backdrop-blur-sm border border-white/30 text-white px-12 py-6 rounded-2xl font-semibold text-xl hover:bg-white/20 hover:border-white/40 transition-all duration-300 cursor-pointer"
+              onClick={() => setShowVideo(true)}
+              type="button"
+              aria-label="Переглянути відео"
+            >
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4 group-hover:bg-red-500 transition-all duration-300 group-hover:scale-110">
+                <svg className="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+              </div>
+              Переглянути відео
+            </button>
           </div>
 
-          {/* Right: Features */}
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Чому обирають нас?</h3>
-              <div className="space-y-4">
-                {[
-                  { icon: '🚗', title: 'Сучасні автомобілі', desc: 'Новий автопарк з механічною та автоматичною КПП' },
-                  { icon: '👨‍🏫', title: 'Досвідчені інструктори', desc: 'Професіонали з багаторічним стажем' },
-                  { icon: '📚', title: 'Повний курс навчання', desc: 'Теорія + практика + підготовка до іспитів' },
-                  { icon: '⭐', title: 'Гарантія результату', desc: '98% наших учнів складають іспит з першого разу' }
-                ].map((feature, idx) => (
-                  <div key={idx} className="flex items-start space-x-4 group">
-                    <div className="text-2xl group-hover:scale-110 transition-transform">{feature.icon}</div>
-                    <div>
-                      <h4 className="text-white font-semibold mb-1">{feature.title}</h4>
-                      <p className="text-gray-400 text-sm">{feature.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          {/* Simple stats */}
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-red-400 mb-2">500+</div>
+              <div className="text-gray-400 text-sm">Випускників</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-red-400 mb-2">15+</div>
+              <div className="text-gray-400 text-sm">Років досвіду</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-red-400 mb-2">98%</div>
+              <div className="text-gray-400 text-sm">Успішність</div>
             </div>
           </div>
         </div>

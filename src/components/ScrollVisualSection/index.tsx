@@ -101,7 +101,7 @@ const ScrollVisualSection = () => {
                 }`}>
                   {/* Step number badge */}
                   <div className="absolute -top-4 left-8">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg transition-all duration-300 ${
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg transition-all duration-300 ${
                       activeIdx === idx 
                         ? 'bg-gradient-to-r from-red-500 to-red-600 scale-110' 
                         : 'bg-gradient-to-r from-red-400 to-red-500'

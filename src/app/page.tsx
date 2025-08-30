@@ -5,6 +5,7 @@ import ScrollVisualSection from '../components/ScrollVisualSection';
 import CoursesSection from '@/components/CoursesSection';
 import ProductivitySection from '@/components/ProductivitySection';
 import DocumentSubmissionSection from '@/components/DocumentSubmissionSection/DocumentSubmissionSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
       <DocumentSubmissionSection />
       <InstructorsSection />
       <ScrollVisualSection />
+      <TestimonialsSection />
     </main>
   );
 }

@@ -70,12 +70,12 @@ const ServicesSection: React.FC = () => (
         </div>
       </div>
 
-      {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Services Grid - Mobile horizontal scroll, Desktop grid */}
+      <div className="lg:grid lg:grid-cols-4 lg:gap-8 flex lg:flex-none overflow-x-auto gap-6 pb-10 scrollbar-hide">
         {services.map((service, index) => (
           <div
             key={service.title}
-            className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-gray-200 transform hover:scale-105"
+            className="group relative bg-white rounded-3xl shadow-lg transition-all duration-500 overflow-hidden transform hover:scale-105 flex-shrink-0 w-80 lg:w-auto"
             style={{ 
               animationDelay: `${index * 100}ms`,
               animation: 'fadeInUp 0.6s ease-out forwards'
@@ -113,6 +113,16 @@ const ServicesSection: React.FC = () => (
         ))}
       </div>
     </div>
+    
+    <style jsx>{`
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    `}</style>
   </section>
 );
 

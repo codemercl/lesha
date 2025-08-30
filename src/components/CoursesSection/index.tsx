@@ -59,7 +59,7 @@ const courses = [
 
 const CoursesSection: React.FC = () => {
   return (
-    <section id="courses" data-bg="white" className="py-16 md:pb-24 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="courses" data-bg="white" className="md:pb-24 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-l from-red-50/20 to-transparent" />
       <div className="absolute top-0 left-0 w-96 h-96 bg-red-100/30 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2" />

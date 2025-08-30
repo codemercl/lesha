@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'Автомобілі', href: 'cars', ariaLabel: 'Перейти до секції Автомобілі' },
   { label: 'Інструктори', href: 'instructors', ariaLabel: 'Перейти до секції Інструктори' },
   { label: 'Контакти', href: 'contacts', ariaLabel: 'Перейти до секції Контакти' },
+  { label: 'Відгуки', href: 'testimonials', ariaLabel: 'Перейти до секції Відгуки' },
 ] as const;
 
 type NavLink = typeof navLinks[number];

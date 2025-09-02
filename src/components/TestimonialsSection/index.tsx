@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import SectionTitle from '../elements/SectionTitle';
 import CallbackPopup from '../CallbackPopup';
 import { useCallbackPopup } from '@/hooks/useCallbackPopup';
 
@@ -256,7 +255,7 @@ const TestimonialsSection: React.FC = () => {
 
                     {/* Review text */}
                     <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                      "{testimonial.text}"
+                      &ldquo;{testimonial.text}&rdquo;
                     </p>
 
                     {/* User info */}

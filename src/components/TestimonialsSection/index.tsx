@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import SectionTitle from '../elements/SectionTitle';
+import CallbackPopup from '../CallbackPopup';
+import { useCallbackPopup } from '@/hooks/useCallbackPopup';
 
 const testimonials = [
   {
@@ -12,7 +13,6 @@ const testimonials = [
     course: 'Механічна КПП',
     rating: 5,
     text: 'Дуже задоволена навчанням! Інструктор Ігор терпляво пояснював всі нюанси. Склала іспит з першого разу завдяки якісній підготовці.',
-    image: '/images/alex.jpg',
     date: '2 місяці тому'
   },
   {
@@ -22,7 +22,6 @@ const testimonials = [
     course: 'Автоматична КПП',
     rating: 5,
     text: 'Автошкола "Формула водіння" - найкращий вибір! Сучасні автомобілі, професійні інструктори. Рекомендую всім!',
-    image: '/images/artem.jpg',
     date: '1 місяць тому'
   },
   {
@@ -32,7 +31,6 @@ const testimonials = [
     course: 'Відновлення навичок',
     rating: 5,
     text: 'Після 5 років перерви боялась сідати за кермо. Інструктори допомогли відновити впевненість. Дякую за терпіння!',
-    image: '/images/instructor01.jpg',
     date: '3 тижні тому'
   },
   {
@@ -42,7 +40,6 @@ const testimonials = [
     course: 'Механічна КПП',
     rating: 4,
     text: 'Гарна автошкола з досвідченими інструкторами. Єдине - хотілося б більше практичних годин у вартості курсу.',
-    image: '/images/instructor02.jpg',
     date: '2 тижні тому'
   },
   {
@@ -52,7 +49,6 @@ const testimonials = [
     course: 'Автоматична КПП',
     rating: 5,
     text: 'Швидко та якісно! Онлайн-теорія дуже зручна, а практика на новеньких автомобілях - просто супер. Рекомендую!',
-    image: '/images/instructor03.jpg',
     date: '1 тиждень тому'
   },
   {
@@ -62,7 +58,6 @@ const testimonials = [
     course: 'Персональні заняття',
     rating: 5,
     text: 'Індивідуальний підхід - це те, що мені було потрібно. Гнучкий графік, уважний інструктор. Дуже задоволений!',
-    image: '/images/instructor04.jpg',
     date: '4 дні тому'
   }
 ];
@@ -70,6 +65,7 @@ const testimonials = [
 const TestimonialsSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const { isCallbackPopupOpen, openCallbackPopup, closeCallbackPopup } = useCallbackPopup();
 
   // Определяем количество карточек на экране
   const getCardsPerView = () => {
@@ -265,13 +261,20 @@ const TestimonialsSection: React.FC = () => {
 
                     {/* User info */}
                     <div className="flex items-center">
-                      <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                        />
+                      <div className={`w-12 h-12 rounded-full flex items-center justify-center mr-4 ${
+                        testimonial.id % 4 === 1 ? 'bg-gradient-to-r from-blue-100 to-blue-200' :
+                        testimonial.id % 4 === 2 ? 'bg-gradient-to-r from-green-100 to-green-200' :
+                        testimonial.id % 4 === 3 ? 'bg-gradient-to-r from-purple-100 to-purple-200' :
+                        'bg-gradient-to-r from-red-100 to-red-200'
+                      }`}>
+                        <svg className={`w-7 h-7 ${
+                          testimonial.id % 4 === 1 ? 'text-blue-500' :
+                          testimonial.id % 4 === 2 ? 'text-green-500' :
+                          testimonial.id % 4 === 3 ? 'text-purple-500' :
+                          'text-red-500'
+                        }`} fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
                       </div>
                       <div className="flex-grow">
                         <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
@@ -344,17 +347,30 @@ const TestimonialsSection: React.FC = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-white to-gray-100 text-red-600 px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-white/20">
+                <button 
+                  onClick={openCallbackPopup}
+                  className="bg-gradient-to-r from-white to-gray-100 text-red-600 px-8 py-4 rounded-2xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border border-white/20 cursor-pointer"
+                >
                   Записатися на курси
                 </button>
-                <button className="bg-gradient-to-r from-red-500/20 to-red-600/20 backdrop-blur-sm border border-red-400/30 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-red-500/30 transition-all duration-300">
+                <a 
+                  href="tel:+380992011683"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-red-500/20 to-red-600/20 backdrop-blur-sm border border-red-400/30 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-red-500/30 transition-all duration-300 cursor-pointer"
+                  aria-label="Зателефонувати для безкоштовної консультації"
+                >
+                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
                   Безкоштовна консультація
-                </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Callback Popup */}
+      <CallbackPopup isOpen={isCallbackPopupOpen} onClose={closeCallbackPopup} />
     </section>
   );
 };

@@ -1,0 +1,48 @@
+{
+  "name": "Автошкола Формула водіння",
+  "short_name": "Формула водіння",
+  "description": "Професійна автошкола в Києві. Навчання водінню з досвідченими інструкторами.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#fb2c36",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "uk",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/logo/logo-red.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo/logo-red.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo/logo-red.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["education", "automotive", "business"],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-mobile.jpg",
+      "sizes": "640x1136",
+      "type": "image/jpeg",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/images/screenshot-desktop.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+}

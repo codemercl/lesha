@@ -2,6 +2,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import SectionTitle from '../elements/SectionTitle';
+import CallbackPopup from '../CallbackPopup';
+import { useCallbackPopup } from '@/hooks/useCallbackPopup';
 
 const features = [
   {
@@ -49,6 +51,7 @@ const features = [
 const ScrollVisualSection = () => {
   const [activeIdx, setActiveIdx] = useState(0);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const { isCallbackPopupOpen, openCallbackPopup, closeCallbackPopup } = useCallbackPopup();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -165,14 +168,20 @@ const ScrollVisualSection = () => {
 
         {/* Call to action */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer">
+          <button 
+            onClick={openCallbackPopup}
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+          >
             <span>Почати навчання</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </div>
+          </button>
         </div>
       </div>
+
+      {/* Callback Popup */}
+      <CallbackPopup isOpen={isCallbackPopupOpen} onClose={closeCallbackPopup} />
     </section>
   );
 };

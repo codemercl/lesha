@@ -1,6 +1,8 @@
 'use client'
 
 import React from 'react';
+import CallbackPopup from '../CallbackPopup';
+import { useCallbackPopup } from '@/hooks/useCallbackPopup';
 
 const services = [
   {
@@ -49,7 +51,10 @@ const services = [
   },
 ];
 
-const ServicesSection: React.FC = () => (
+const ServicesSection: React.FC = () => {
+  const { isCallbackPopupOpen, openCallbackPopup, closeCallbackPopup } = useCallbackPopup();
+
+  return (
   <section id="services" data-bg="light" className="py-16 md:py-24 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
     {/* Background decoration */}
     <div className="absolute inset-0 bg-gradient-to-r from-red-50/20 to-transparent" />
@@ -102,7 +107,10 @@ const ServicesSection: React.FC = () => (
               </p>
 
               {/* Action button */}
-              <button className={`mt-6 w-full bg-gradient-to-r ${service.color} text-white py-3 px-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300`}>
+              <button 
+                onClick={openCallbackPopup}
+                className={`mt-6 w-full bg-gradient-to-r ${service.color} text-white py-3 px-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer`}
+              >
                 Дізнатися більше
               </button>
             </div>
@@ -123,7 +131,11 @@ const ServicesSection: React.FC = () => (
         scrollbar-width: none;
       }
     `}</style>
+
+    {/* Callback Popup */}
+    <CallbackPopup isOpen={isCallbackPopupOpen} onClose={closeCallbackPopup} />
   </section>
-);
+  );
+};
 
 export default ServicesSection; 

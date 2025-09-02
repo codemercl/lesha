@@ -8,17 +8,53 @@ import DocumentSubmissionSection from '@/components/DocumentSubmissionSection/Do
 import TestimonialsSection from '@/components/TestimonialsSection';
 
 export default function Home() {
-
   return (
-    <main>
-      <ProductivitySection />
-      <ServicesSection />
-      <CoursesSection />
-      <CarsSection />
-      <DocumentSubmissionSection />
-      <InstructorsSection />
-      <ScrollVisualSection />
-      <TestimonialsSection />
-    </main>
+    <>
+      {/* Main content with proper semantic structure */}
+      <main role="main" itemScope itemType="https://schema.org/WebPage">
+        <meta itemProp="name" content="Автошкола Формула водіння - Головна сторінка" />
+        <meta itemProp="description" content="Професійна автошкола в Києві з досвідченими інструкторами" />
+        
+        {/* Hero Section */}
+        <section itemScope itemType="https://schema.org/Organization">
+          <ProductivitySection />
+        </section>
+        
+        {/* Services */}
+        <section itemScope itemType="https://schema.org/Service" aria-label="Додаткові послуги">
+          <ServicesSection />
+        </section>
+        
+        {/* Courses */}
+        <section itemScope itemType="https://schema.org/Course" aria-label="Наші курси">
+          <CoursesSection />
+        </section>
+        
+        {/* Cars */}
+        <section itemScope itemType="https://schema.org/Product" aria-label="Автопарк">
+          <CarsSection />
+        </section>
+        
+        {/* Document submission */}
+        <section aria-label="Подача документів">
+          <DocumentSubmissionSection />
+        </section>
+        
+        {/* Instructors */}
+        <section itemScope itemType="https://schema.org/Person" aria-label="Наші інструктори">
+          <InstructorsSection />
+        </section>
+        
+        {/* Process steps */}
+        <section itemScope itemType="https://schema.org/HowTo" aria-label="Як отримати права">
+          <ScrollVisualSection />
+        </section>
+        
+        {/* Testimonials */}
+        <section itemScope itemType="https://schema.org/Review" aria-label="Відгуки клієнтів">
+          <TestimonialsSection />
+        </section>
+      </main>
+    </>
   );
 }

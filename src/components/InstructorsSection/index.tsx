@@ -4,9 +4,12 @@ import React, { useState, useEffect } from 'react';
 import { instructors } from './static/instructors';
 import InstructorCard from './elements/InstructorCard';
 import SectionTitle from '../elements/SectionTitle';
+import CallbackPopup from '../CallbackPopup';
+import { useCallbackPopup } from '@/hooks/useCallbackPopup';
 
 const InstructorsSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { isCallbackPopupOpen, openCallbackPopup, closeCallbackPopup } = useCallbackPopup();
   
   // Определяем количество карточек на экране: мобайл — 1, десктоп — 3
   const getCardsPerView = () => {
@@ -111,7 +114,7 @@ const InstructorsSection: React.FC = () => {
                   className="flex-shrink-0 px-4"
                   style={{ width: `${100 / cardsPerView}%` }}
                 >
-                  <InstructorCard instructor={instructor} />
+                  <InstructorCard instructor={instructor} onSelectInstructor={openCallbackPopup} />
                 </div>
               ))}
             </div>
@@ -123,6 +126,9 @@ const InstructorsSection: React.FC = () => {
 
         </div>
       </div>
+
+      {/* Callback Popup */}
+      <CallbackPopup isOpen={isCallbackPopupOpen} onClose={closeCallbackPopup} />
     </section>
   );
 };

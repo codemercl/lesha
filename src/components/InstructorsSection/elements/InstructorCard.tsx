@@ -2,7 +2,10 @@ import React from 'react';
 import Image from 'next/image';
 import { Instructor } from '../types';
 
-const InstructorCard: React.FC<{ instructor: Instructor }> = ({ instructor }) => (
+const InstructorCard: React.FC<{ 
+  instructor: Instructor;
+  onSelectInstructor?: () => void;
+}> = ({ instructor, onSelectInstructor }) => (
   <article
     className="group relative flex flex-col w-full bg-white rounded-3xl shadow-xl hover:shadow-2xl focus-within:ring-2 focus-within:ring-red-100 transition-all duration-500 overflow-hidden border border-gray-100 hover:border-red-200"
     aria-label={`Карточка інструктора ${instructor.name}`}
@@ -19,6 +22,7 @@ const InstructorCard: React.FC<{ instructor: Instructor }> = ({ instructor }) =>
         width={400}
         height={256}
         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+        style={{ objectPosition: '50% 10%' }}
         priority={false}
         draggable={false}
       />
@@ -84,7 +88,10 @@ const InstructorCard: React.FC<{ instructor: Instructor }> = ({ instructor }) =>
       </div>
       
       {/* Action button */}
-      <button className="mt-6 w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-700">
+      <button 
+        onClick={onSelectInstructor}
+        className="mt-6 w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-700 cursor-pointer"
+      >
         Обрати інструктора
       </button>
     </div>

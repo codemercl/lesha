@@ -1,9 +1,12 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
+import CallbackPopup from '../CallbackPopup';
+import { useCallbackPopup } from '@/hooks/useCallbackPopup';
 
 const ProductivitySection = () => {
   const [showVideo, setShowVideo] = useState(false);
+  const { isCallbackPopupOpen, openCallbackPopup, closeCallbackPopup } = useCallbackPopup();
 
   return (
     <section id="about" data-bg="red" className="w-full min-h-screen bg-gradient-to-br from-gray-900 to-black relative overflow-hidden flex items-center">
@@ -61,6 +64,7 @@ const ProductivitySection = () => {
           {/* Main CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <button
+              onClick={openCallbackPopup}
               className="group relative overflow-hidden bg-gradient-to-r from-red-500 to-red-600 text-white px-12 py-6 rounded-2xl font-bold text-xl shadow-2xl hover:shadow-red-500/25 transform hover:scale-105 transition-all duration-300 cursor-pointer"
               type="button"
               aria-label="Розпочати навчання"
@@ -142,6 +146,9 @@ const ProductivitySection = () => {
           </div>
         </div>
       )}
+
+      {/* Callback Popup */}
+      <CallbackPopup isOpen={isCallbackPopupOpen} onClose={closeCallbackPopup} />
     </section>
   );
 };

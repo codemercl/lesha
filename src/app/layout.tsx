@@ -77,10 +77,8 @@ export default function RootLayout({
       <head>
         <link rel="manifest" href="/manifest.json" />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/logo/logo-red.png" />
-        <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
         <meta name="theme-color" content="#fb2c36" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />

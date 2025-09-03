@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   <!-- Логотипы -->
-  <url>
-    <loc>https://formula-vodinnya.com/</loc>
-    <image:image>
-      <image:loc>https://formula-vodinnya.com/logo/logo-red.png</image:loc>
-      <image:title>Логотип автошколи Формула водіння</image:title>
-      <image:caption>Офіційний логотип автошколи Формула водіння в Києві</image:caption>
-    </image:image>
+           <url>
+           <loc>https://formula-vodinnya.com/</loc>
+           <image:image>
+             <image:loc>https://formula-vodinnya.com/logo/logo-red.png</image:loc>
+             <image:title>Логотип автошколи Формула водіння</image:title>
+             <image:caption>Офіційний логотип автошколи Формула водіння в Харкові</image:caption>
+           </image:image>
     <image:image>
       <image:loc>https://formula-vodinnya.com/logo/logo-white.png</image:loc>
       <image:title>Логотип автошколи (білий)</image:title>

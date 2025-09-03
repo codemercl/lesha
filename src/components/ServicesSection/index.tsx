@@ -55,7 +55,7 @@ const ServicesSection: React.FC = () => {
   const { isCallbackPopupOpen, openCallbackPopup, closeCallbackPopup } = useCallbackPopup();
 
   return (
-  <section id="services" data-bg="light" className="py-16 md:py-24 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+  <section id="services" data-bg="light" className="pt-16 pb-5 md:py-0 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
     {/* Background decoration */}
     <div className="absolute inset-0 bg-gradient-to-r from-red-50/20 to-transparent" />
     <div className="absolute top-0 right-0 w-96 h-96 bg-red-100/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />

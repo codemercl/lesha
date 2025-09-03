@@ -16,37 +16,37 @@ export default function Home() {
         <section itemScope itemType="https://schema.org/Organization">
           <ProductivitySection />
         </section>
-        
-        {/* Services */}
-        <section itemScope itemType="https://schema.org/Service" aria-label="Додаткові послуги">
-          <ServicesSection />
-        </section>
-        
+
         {/* Courses */}
         <section itemScope itemType="https://schema.org/Course" aria-label="Наші курси">
           <CoursesSection />
         </section>
-        
-        {/* Cars */}
-        <section itemScope itemType="https://schema.org/Product" aria-label="Автопарк">
-          <CarsSection />
+
+        {/* Services */}
+        <section itemScope itemType="https://schema.org/Service" aria-label="Додаткові послуги">
+          <ServicesSection />
         </section>
-        
-        {/* Document submission */}
-        <section aria-label="Подача документів">
-          <DocumentSubmissionSection />
-        </section>
-        
+
         {/* Instructors */}
         <section itemScope itemType="https://schema.org/Person" aria-label="Наші інструктори">
           <InstructorsSection />
         </section>
-        
+
+        {/* Cars */}
+        <section itemScope itemType="https://schema.org/Product" aria-label="Автопарк">
+          <CarsSection />
+        </section>
+
+        {/* Document submission */}
+        <section aria-label="Подача документів">
+          <DocumentSubmissionSection />
+        </section>
+
         {/* Process steps */}
-        <section itemScope itemType="https://schema.org/HowTo" aria-label="Як отримати права">
+        <section itemScope itemType="https://schema.org/HowTo" aria-label="Як отримати водійське">
           <ScrollVisualSection />
         </section>
-        
+
         {/* Testimonials */}
         <section itemScope itemType="https://schema.org/Review" aria-label="Відгуки клієнтів">
           <TestimonialsSection />

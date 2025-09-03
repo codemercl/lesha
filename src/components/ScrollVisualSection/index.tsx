@@ -70,12 +70,12 @@ const ScrollVisualSection = () => {
   }, []);
 
   return (
-    <section id="contacts" data-bg="light" className="w-full bg-gradient-to-br from-gray-50 to-white py-16 md:pb-24 pt-0 overflow-hidden">
+    <section data-bg="light" className="w-full bg-gradient-to-br from-gray-50 to-white py-16 md:pb-24 pt-0 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Заголовок секции */}
         <div className="text-center mb-16">
           <SectionTitle as="h2" className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Як отримати права?
+            Як отримати водійське?
           </SectionTitle>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Простий процес з чотирьох кроків, який приведе вас до водійського посвідчення

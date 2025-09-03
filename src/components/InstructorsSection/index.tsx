@@ -56,7 +56,7 @@ const InstructorsSection: React.FC = () => {
     <section
       id="instructors"
       data-bg="white"
-      className="py-16 md:py-24 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
+      className="py-5 md:py-10 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-r from-red-50/20 to-transparent" />

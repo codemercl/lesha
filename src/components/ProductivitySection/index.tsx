@@ -105,7 +105,7 @@ const ProductivitySection = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-red-400 mb-2">98%</div>
-              <div className="text-gray-400 text-sm">Успішність</div>
+              <div className="text-gray-400 text-sm">Складають з 1/2 спроби</div>
             </div>
           </div>
         </div>

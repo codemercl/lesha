@@ -65,7 +65,7 @@ const CoursesSection: React.FC = () => {
   const { isCallbackPopupOpen, openCallbackPopup, closeCallbackPopup } = useCallbackPopup();
 
   return (
-    <section id="courses" data-bg="white" className="md:pb-24 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="courses" data-bg="white" className="md:pb-24 pt-10 px-4 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-l from-red-50/20 to-transparent" />
       <div className="absolute top-0 left-0 w-96 h-96 bg-red-100/30 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2" />
@@ -146,12 +146,12 @@ const CoursesSection: React.FC = () => {
 
                 {/* Action button */}
                 <button
-                  onClick={() => window.open('https://n1084458.alteg.io/company/1031434/personal/select-services?_gl=1*198rmyr*_gcl_aw*R0NMLjE3NTI2ODI5NDcuQ2owS0NRandtOTNEQmhEX0FSSXNBRFJfRGpGWlNQbjA4YkV3em1JNWI2MW5ZcU9lczRfejJYU0o0Y2J2LXkxMG5aX3Jlc2stWDUyZnhDMGFBb2xJRUFMd183Y0I.*_gcl_au*MTg1NzM1NDY1OS4xNzUyNjgyNjc4&o=', '_blank')}
+                  onClick={openCallbackPopup}
                   className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-4 px-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 group-hover:from-red-600 group-hover:to-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 cursor-pointer"
                   tabIndex={0}
-                  aria-label={`Переглянути розклад для ${course.title}`}
+                  aria-label={`Дізнатись більше для ${course.title}`}
                 >
-                  Переглянути Розклад
+                  Дізнатись більше
                 </button>
               </div>
 
@@ -174,7 +174,7 @@ const CoursesSection: React.FC = () => {
             </div>
 
             {/* Contact options - Mobile horizontal scroll, Desktop grid */}
-            <div className="lg:grid lg:grid-cols-4 lg:gap-4 flex lg:flex-none overflow-x-auto gap-4 pb-4 lg:pb-0 scrollbar-hide">
+            <div className="lg:grid lg:grid-cols-5 lg:gap-4 flex lg:flex-none overflow-x-auto gap-4 pb-4 lg:pb-0 scrollbar-hide">
               {/* Telegram */}
               <a
                 href="https://t.me/formulamessage_bot"
@@ -193,7 +193,7 @@ const CoursesSection: React.FC = () => {
 
               {/* Instagram */}
               <a
-                href="https://instagram.com/formula_vodinnya"
+                href="https://www.instagram.com/formula_vodinya?igsh=ZGx6YXFoZ3JkbGc1&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-white rounded-xl p-4 shadow-md hover:shadow-lg border border-gray-100 hover:border-pink-200 transition-all duration-300 transform hover:scale-105 flex-shrink-0 w-48 lg:w-auto"
@@ -207,18 +207,36 @@ const CoursesSection: React.FC = () => {
                 <p className="text-gray-600 text-xs text-center">Фото та новини</p>
               </a>
 
-              {/* Viber */}
+              {/* TikTok */}
               <a
-                href="viber://chat?number=+380992011683"
+                href="https://www.tiktok.com/@formula_vodinya?_t=ZM-8zOXGlgP1pl&_r=1"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group bg-white rounded-xl p-4 shadow-md hover:shadow-lg border border-gray-100 hover:border-purple-200 transition-all duration-300 transform hover:scale-105 flex-shrink-0 w-48 lg:w-auto"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M13.5 2C18.194 2 22 5.806 22 10.5c0 4.694-3.806 8.5-8.5 8.5-1.519 0-2.942-.4-4.17-1.102L2 20l2.102-7.33A8.459 8.459 0 0 1 3 10.5C3 5.806 6.806 2 11.5 2h2zm-1.816 10.4c-.614 0-1.112-.498-1.112-1.112 0-.614.498-1.112 1.112-1.112s1.112.498 1.112 1.112c0 .614-.498 1.112-1.112 1.112zm4.632 0c-.614 0-1.112-.498-1.112-1.112 0-.614.498-1.112 1.112-1.112s1.112.498 1.112 1.112c0 .614-.498 1.112-1.112 1.112z"/>
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.35 3.12-5.15 3.61-1.8.49-3.63.31-5.24-.5-1.62-.81-2.96-2.21-3.84-3.96-.88-1.75-.96-3.71-.25-5.56.71-1.85 2.07-3.19 3.95-4.09 1.88-.9 3.96-1.26 6.03-.84 0-.01-.01-.01-.01-.02zm-3.95 16.92c.19-.03.37-.09.56-.14.18-.05.35-.12.52-.2.17-.08.33-.18.48-.28.15-.1.3-.22.44-.35.14-.13.27-.27.39-.42.12-.15.23-.31.33-.47.1-.16.19-.33.27-.5.08-.17.15-.35.21-.53.06-.18.11-.37.15-.56.04-.19.07-.38.09-.57.02-.19.03-.39.03-.58 0-.19-.01-.38-.03-.57-.02-.19-.05-.38-.09-.57-.04-.19-.09-.38-.15-.56-.06-.18-.13-.36-.21-.53-.08-.17-.17-.34-.27-.5-.1-.16-.21-.32-.33-.47-.12-.15-.25-.29-.39-.42-.14-.13-.29-.25-.44-.35-.15-.1-.31-.2-.48-.28-.17-.08-.34-.15-.52-.2-.18-.05-.37-.11-.56-.14-.19-.03-.38-.05-.57-.06-.19-.01-.39-.02-.58-.02-.19 0-.38.01-.57.02-.19.01-.38.03-.57.06-.19.03-.37.09-.56.14-.18.05-.35.12-.52.2-.17.08-.33.18-.48.28-.15.1-.3.22-.44.35-.14.13-.27.27-.39.42-.12.15-.23.31-.33.47-.1.16-.19.33-.27.5-.08.17-.15.35-.21.53-.06.18-.11.37-.15.56-.04.19-.07.38-.09.57-.02.19-.03.39-.03.58 0 .19.01.38.03.57.02.19.05.38.09.57.04.19.09.38.15.56.06.18.13.36.21.53.08.17.17.34.27.5.1.16.21.32.33.47.12.15.25.29.39.42.14.13.29.25.44.35.15.1.31.2.48.28.17.08.34.15.52.2.18.05.37.11.56.14.19.03.38.05.57.06.19.01.39.02.58.02.19 0 .38-.01.57-.02.19-.01.38-.03.57-.06z"/>
                   </svg>
                 </div>
-                <h4 className="text-base font-bold text-gray-900 mb-1 text-center">Viber</h4>
-                <p className="text-gray-600 text-xs text-center">Спілкування</p>
+                <h4 className="text-base font-bold text-gray-900 mb-1 text-center">TikTok</h4>
+                <p className="text-gray-600 text-xs text-center">Відео та тренди</p>
+              </a>
+
+              {/* YouTube */}
+              <a
+                href="https://youtube.com/@formula_vodinya?si=07-UPsf52GNgi-mf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white rounded-xl p-4 shadow-md hover:shadow-lg border border-gray-100 hover:border-red-200 transition-all duration-300 transform hover:scale-105 flex-shrink-0 w-48 lg:w-auto"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </div>
+                <h4 className="text-base font-bold text-gray-900 mb-1 text-center">YouTube</h4>
+                <p className="text-gray-600 text-xs text-center">Навчальні відео</p>
               </a>
 
               {/* Phone */}

@@ -12,9 +12,6 @@ export default function Home() {
     <>
       {/* Main content with proper semantic structure */}
       <main role="main" itemScope itemType="https://schema.org/WebPage">
-        <meta itemProp="name" content="Автошкола Формула водіння - Головна сторінка" />
-        <meta itemProp="description" content="Професійна автошкола в Києві з досвідченими інструкторами" />
-        
         {/* Hero Section */}
         <section itemScope itemType="https://schema.org/Organization">
           <ProductivitySection />

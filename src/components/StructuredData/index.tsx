@@ -15,7 +15,7 @@ const StructuredData: React.FC = () => {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "вул. Прикладна, 123",
-      "addressLocality": "Київ",
+      "addressLocality": "Харків",
       "postalCode": "01001",
       "addressCountry": "UA"
     },
@@ -34,7 +34,7 @@ const StructuredData: React.FC = () => {
     "currenciesAccepted": "UAH",
     "areaServed": {
       "@type": "City",
-      "name": "Київ"
+      "name": "Харків"
     },
     "serviceType": "Driving School",
     "aggregateRating": {
@@ -111,7 +111,7 @@ const StructuredData: React.FC = () => {
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "вул. Прикладна, 123",
-      "addressLocality": "Київ",
+      "addressLocality": "Харків",
       "postalCode": "01001",
       "addressCountry": "UA"
     },

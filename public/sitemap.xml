@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd
+        http://www.google.com/schemas/sitemap-video/1.1
+        http://www.google.com/schemas/sitemap-video/1.1/sitemap-video.xsd">
   
   <!-- Главная страница -->
   <url>
@@ -10,6 +16,50 @@
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/logo/logo-red.png</image:loc>
+      <image:title>Автошкола Формула водіння - Логотип</image:title>
+      <image:caption>Логотип автошколи Формула водіння в Києві</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/background-cars.png</image:loc>
+      <image:title>Автопарк автошколи</image:title>
+      <image:caption>Сучасні автомобілі для навчання водінню</image:caption>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://formula-vodinnya.com/images/background-cars.png</video:thumbnail_loc>
+      <video:title>Відео про автошколу Формула водіння</video:title>
+      <video:description>Презентаційне відео автошколи з показом навчального процесу</video:description>
+      <video:content_loc>https://formula-vodinnya.com/video/background.mp4</video:content_loc>
+      <video:duration>30</video:duration>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+  
+  <!-- О нас / Главная секция -->
+  <url>
+    <loc>https://formula-vodinnya.com/#about</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/background-cars.png</image:loc>
+      <image:title>Про автошколу Формула водіння</image:title>
+      <image:caption>Дізнайтеся більше про нашу автошколу та місію</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Дополнительные услуги -->
+  <url>
+    <loc>https://formula-vodinnya.com/#services</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/background-info.png</image:loc>
+      <image:title>Додаткові послуги автошколи</image:title>
+      <image:caption>Широкий спектр послуг для ефективного навчання</image:caption>
+    </image:image>
   </url>
   
   <!-- Курсы обучения -->
@@ -18,14 +68,50 @@
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/document.png</image:loc>
+      <image:title>Курси навчання водінню</image:title>
+      <image:caption>Теоретичні та практичні курси для отримання прав</image:caption>
+    </image:image>
   </url>
   
-  <!-- Инструкторы -->
+  <!-- Онлайн-курс ПДР -->
   <url>
-    <loc>https://formula-vodinnya.com/#instructors</loc>
+    <loc>https://formula-vodinnya.com/#courses-online</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/document03.png</image:loc>
+      <image:title>Онлайн-курс ПДР</image:title>
+      <image:caption>Дистанційне навчання Правил дорожнього руху</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Механическая КПП -->
+  <url>
+    <loc>https://formula-vodinnya.com/#courses-mechanical</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/auto03.jpg</image:loc>
+      <image:title>Навчання на механічній КПП</image:title>
+      <image:caption>Курс водіння на автомобілях з механічною коробкою передач</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Автоматическая КПП -->
+  <url>
+    <loc>https://formula-vodinnya.com/#courses-automatic</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/auto01.JPG</image:loc>
+      <image:title>Навчання на автоматичній КПП</image:title>
+      <image:caption>Курс водіння на автомобілях з автоматичною коробкою передач</image:caption>
+    </image:image>
   </url>
   
   <!-- Автопарк -->
@@ -34,6 +120,90 @@
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/auto01.JPG</image:loc>
+      <image:title>Toyota Camry - АКПП</image:title>
+      <image:caption>Автомобіль Toyota Camry з автоматичною коробкою передач</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/auto02.jpg</image:loc>
+      <image:title>Honda Accord - АКПП</image:title>
+      <image:caption>Автомобіль Honda Accord з автоматичною коробкою передач</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/auto03.jpg</image:loc>
+      <image:title>Volkswagen Polo - МКПП</image:title>
+      <image:caption>Автомобіль Volkswagen Polo з механічною коробкою передач</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/auto04.JPG</image:title>
+      <image:title>Hyundai Solaris - АКПП</image:title>
+      <image:caption>Автомобіль Hyundai Solaris з автоматичною коробкою передач</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/auto05.jpg</image:loc>
+      <image:title>Hyundai Solaris - АКПП</image:title>
+      <image:caption>Автомобіль Hyundai Solaris з автоматичною коробкою передач</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Подача документов -->
+  <url>
+    <loc>https://formula-vodinnya.com/#documents</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/document.png</image:loc>
+      <image:title>Подача документів</image:title>
+      <image:caption>Допомога в оформленні документів для навчання</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Инструкторы -->
+  <url>
+    <loc>https://formula-vodinnya.com/#instructors</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/instructor01.jpg</image:loc>
+      <image:title>Інструктор Ігор</image:title>
+      <image:caption>Досвідчений інструктор з 1989 року</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/instructor02.jpg</image:loc>
+      <image:title>Інструктор Євген</image:title>
+      <image:caption>Інструктор з 1995 року, навчає з 2007</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/instructor03.jpg</image:loc>
+      <image:title>Інструктор Олексій</image:title>
+      <image:caption>Інструктор з 2014 року, навчає з 2022</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/instructor04.jpg</image:loc>
+      <image:title>Інструктор Олександр</image:title>
+      <image:caption>Інструктор з 2005 року, навчає з 2023</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/instructor05.jpg</image:loc>
+      <image:title>Інструктор Миколай</image:title>
+      <image:caption>Інструктор з 2010 року, навчає з 2023</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Как получить права -->
+  <url>
+    <loc>https://formula-vodinnya.com/#how-to-get-license</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/background-info.png</image:loc>
+      <image:title>Як отримати права</image:title>
+      <image:caption>Покрокова інструкція отримання водійського посвідчення</image:caption>
+    </image:image>
   </url>
   
   <!-- Отзывы -->
@@ -42,22 +212,92 @@
     <lastmod>2025-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/background-card.png</image:loc>
+      <image:title>Відгуки випускників</image:title>
+      <image:caption>Реальні історії успіху наших учнів</image:caption>
+    </image:image>
   </url>
   
-  <!-- Услуги -->
-  <url>
-    <loc>https://formula-vodinnya.com/#services</loc>
-    <lastmod>2025-01-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Как получить права -->
+  <!-- Контакты -->
   <url>
     <loc>https://formula-vodinnya.com/#contacts</loc>
     <lastmod>2025-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/background-info.png</image:loc>
+      <image:title>Контакти автошколи</image:title>
+      <image:caption>Зв'яжіться з нами для запитання та запису</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Цены и тарифы -->
+  <url>
+    <loc>https://formula-vodinnya.com/#prices</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/document.png</image:loc>
+      <image:title>Ціни на курси водіння</image:title>
+      <image:caption>Актуальні ціни на всі курси та послуги автошколи</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- FAQ / Часто задаваемые вопросы -->
+  <url>
+    <loc>https://formula-vodinnya.com/#faq</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/background-info.png</image:loc>
+      <image:title>Часті запитання</image:title>
+      <image:caption>Відповіді на популярні запитання про автошколу</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Блог / Новости -->
+  <url>
+    <loc>https://formula-vodinnya.com/#blog</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/background-info.png</image:loc>
+      <image:title>Блог автошколи</image:title>
+      <image:caption>Корисні статті та новини про навчання водінню</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Лицензии и сертификаты -->
+  <url>
+    <loc>https://formula-vodinnya.com/#licenses</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <image:image>
+      <image:loc>https://formula-vodinnya.com/images/document.png</image:loc>
+      <image:title>Ліцензії та сертифікати</image:title>
+      <image:caption>Документи, що підтверджують якість навчання</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Политика конфиденциальности -->
+  <url>
+    <loc>https://formula-vodinnya.com/privacy</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Условия использования -->
+  <url>
+    <loc>https://formula-vodinnya.com/terms</loc>
+    <lastmod>2025-01-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   
 </urlset>

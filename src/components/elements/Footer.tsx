@@ -136,7 +136,7 @@ const Footer: React.FC = () => {
                 <div>
                   <p className="text-gray-300 text-base font-inter leading-relaxed">
                     вул. Прикладна, 123<br />
-                    м. Київ, 01001
+                    м. Харків, 01001
                   </p>
                 </div>
               </div>
